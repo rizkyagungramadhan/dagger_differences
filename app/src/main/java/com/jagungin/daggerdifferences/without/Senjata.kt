@@ -10,5 +10,6 @@ class Senjata {
     //create 2 weapons function to return a string value with differennt data
     fun tombak(): String { return "Tombak"}
     fun pedang(): String { return "Pedang"}
+    fun clurit(): String { return "Clurit"}
 
 }

@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
             checked = isChecked
         }
 
-        //with Dependency Injection
+        //with Dependency Injection add some constructor in this class (MainActivity) only
         val senjatDi = SenjataDI()
         val lightKnightDI = LightKnightDI(senjatDi)
         val darkKnightDI = DarkKnightDI(senjatDi)
@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity() {
         click_me.setOnClickListener {
             reportBattle = if (checked) {
                 "${lightKnightDI.setEquip_DI()} \ndan\n ${darkKnightDI.setEquip_DI()}"
+
             } else {
                 "${lightKnight.setEquip()} \ndan\n ${darkKnight.setEquip()}"
                 //manual dependency was fine if used from a bit of class,
