@@ -1,6 +1,7 @@
 package com.jagungin.daggerdifferences.dagger
 
 import dagger.Component
+import javax.inject.Singleton
 
 /**
  * Created by Rizky Agung Ramadhan
