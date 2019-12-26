@@ -1,7 +1,9 @@
 package com.jagungin.daggerdifferences
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.jagungin.daggerdifferences.dagger.DaggerActivity
 import com.jagungin.daggerdifferences.with_di.DarkKnightDI
 import com.jagungin.daggerdifferences.with_di.LightKnightDI
 import com.jagungin.daggerdifferences.with_di.SenjataDI
@@ -27,7 +29,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         //with Dependency Injection add some constructor in this class (MainActivity) only
-        val senjatDi = SenjataDI()
+        val pedangName = "Pedang DI"
+        val tombakName = "Tombak DI"
+        val senjatDi = SenjataDI(pedangName, tombakName)
         val lightKnightDI = LightKnightDI(senjatDi)
         val darkKnightDI = DarkKnightDI(senjatDi)
 
@@ -35,7 +39,6 @@ class MainActivity : AppCompatActivity() {
         click_me.setOnClickListener {
             reportBattle = if (checked) {
                 "${lightKnightDI.setEquip_DI()} \ndan\n ${darkKnightDI.setEquip_DI()}"
-
             } else {
                 "${lightKnight.setEquip()} \ndan\n ${darkKnight.setEquip()}"
                 //manual dependency was fine if used from a bit of class,
@@ -43,6 +46,10 @@ class MainActivity : AppCompatActivity() {
                 //because if SenjataClass have changes, other class depend on it must be changed too
             }
             report.text = reportBattle
+        }
+
+        click_dagger.setOnClickListener {
+            startActivity(Intent(this, DaggerActivity::class.java))
         }
     }
 }
