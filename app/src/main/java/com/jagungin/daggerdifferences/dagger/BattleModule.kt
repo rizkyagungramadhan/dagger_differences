@@ -2,6 +2,9 @@ package com.jagungin.daggerdifferences.dagger
 
 import dagger.Module
 import dagger.Provides
+import com.jagungin.daggerdifferences.without.Senjata
+
+
 
 /**
  * Created by Rizky Agung Ramadhan
@@ -11,7 +14,14 @@ import dagger.Provides
 class BattleModule {
     //provide dependencies wi=hich will used with parameter
     @Provides
-    fun setSenjata(): SenjataDagger{
+    @Choose("MainWeapon")
+    fun setSenjata(): SenjataDagger {
         return SenjataDagger("Pedang Larva Dagger", "Tombak Halilintar Dagger")
+    }
+
+    @Provides
+    @Choose("SecondWeapon")
+    fun setSenjataSecond(): SenjataDagger {
+        return SenjataDagger("Pedang Dragon Dagger", "Tombak Golem Dagger")
     }
 }
