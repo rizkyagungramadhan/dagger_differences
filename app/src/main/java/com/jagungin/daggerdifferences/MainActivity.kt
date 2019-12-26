@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //Create Instance/Object from DARK and LIGHT Knight
+        //Without Dependency Injection
         val lightKnight = LightKnight()
         val darkKnight = DarkKnight()
 
@@ -25,6 +26,7 @@ class MainActivity : AppCompatActivity() {
             checked = isChecked
         }
 
+        //with Dependency Injection
         val senjatDi = SenjataDI()
         val lightKnightDI = LightKnightDI(senjatDi)
         val darkKnightDI = DarkKnightDI(senjatDi)
