@@ -11,17 +11,8 @@ import com.jagungin.daggerdifferences.without.Senjata
 class DarkKnightDagger @Inject constructor(
     @Choose("MainWeapon") val senjataMain: SenjataDagger, @Choose(
         "SecondWeapon"
-    ) var senjataSecond: SenjataDagger
+    ) val senjataSecond: SenjataDagger
 ) {
-
-    //add 2 qualifier
-    /*   @Inject
-       @Choose("MainWeapon")
-       lateinit var senjataMains: SenjataDagger
-
-       @Inject
-       @Choose("SecondWeapon")
-       lateinit var senjataSeconds: SenjataDagger*/
 
     //create Function to return string value
     fun setEquip_Dagger(): String {

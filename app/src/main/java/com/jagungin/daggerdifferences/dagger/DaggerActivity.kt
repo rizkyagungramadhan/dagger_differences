@@ -22,7 +22,8 @@ class DaggerActivity : AppCompatActivity() {
         DaggerBattleComponent.create().inject(this)
 
         click_me.setOnClickListener {
-           val text = "${lightKnightDagger.setEquip_Dagger()} \ndan\n ${darkKnightDagger.setEquip_Dagger()}"
+            val text =
+                "${lightKnightDagger.setEquip_Dagger()} \ndan\n ${darkKnightDagger.setEquip_Dagger()}"
             report.text = text
         }
     }
