@@ -1,7 +1,7 @@
 package com.jagungin.daggerdifferences.dagger
 
+import com.jagungin.daggerdifferences.dagger.activity.DaggeQualifierrActivity
 import dagger.Component
-import javax.inject.Singleton
 
 /**
  * Created by Rizky Agung Ramadhan
@@ -10,5 +10,5 @@ import javax.inject.Singleton
 @Component(modules = [BattleModule::class])
 interface BattleComponent {
     //get the context from activity which is receiving injector
-    fun inject(context: DaggerActivity)
+    fun inject(context: DaggeQualifierrActivity)
 }

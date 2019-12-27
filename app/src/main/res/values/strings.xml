@@ -3,6 +3,7 @@
     <string name="info_battle">Info Battle</string>
     <string name="click_here_for_more_info">Click Here for More Info</string>
     <string name="with_dependency_injection">With Dependency Injection? </string>
-    <string name="dagger_activity">Dagger Activity</string>
-    <string name="run_di_with_dagger2">RUN DI with Dagger2</string>
+    <string name="dagger_activity">Dagger Activity ===></string>
+    <string name="run_di_with_dagger2">RUN DI with Dagger2 Qualifier</string>
+    <string name="dagger_scope">DAGGER SCOPE ===></string>
 </resources>

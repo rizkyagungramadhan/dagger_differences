@@ -3,7 +3,7 @@ package com.jagungin.daggerdifferences
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.jagungin.daggerdifferences.dagger.DaggerActivity
+import com.jagungin.daggerdifferences.dagger.activity.DaggeQualifierrActivity
 import com.jagungin.daggerdifferences.with_di.DarkKnightDI
 import com.jagungin.daggerdifferences.with_di.LightKnightDI
 import com.jagungin.daggerdifferences.with_di.SenjataDI
@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         click_dagger.setOnClickListener {
-            startActivity(Intent(this, DaggerActivity::class.java))
+            startActivity(Intent(this, DaggeQualifierrActivity::class.java))
         }
     }
 }
